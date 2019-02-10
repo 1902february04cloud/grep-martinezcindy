@@ -16,6 +16,7 @@ grep '\<.ar'
 grep -v '^C'
 
 #6
+grep -E '[^ ]{14}
 --The command below will count blanks and non-english char giving 44 entries
 grep -E '.{14,100}'
 
@@ -28,9 +29,11 @@ grep 'd' -c
 
 #9
 grep -E '(.)\1{1}$'
+--this also works
+grep -E '(.)\1+&'
 
 #10
-grep -E ..........delimiter? script?
+grep -E '(.)(.).\2\1'........delimiter? script?
 
 #extra
 --doesn't work because it requires ERE extensions
