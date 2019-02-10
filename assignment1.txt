@@ -24,8 +24,7 @@ grep -E '.{14,100}'
 grep '^B' -c
 
 #8
---The command below gives 79 entries, with -i giving 101 entries
-grep 'd' -c
+grep -o 'd' cities.txt | wc -l
 
 #9
 grep -E '(.)\1{1}$'
@@ -33,7 +32,7 @@ grep -E '(.)\1{1}$'
 grep -E '(.)\1+&'
 
 #10
-grep -E '(.)(.).\2\1'........delimiter? script?
+grep -iEw '(.)(.).\2\1'
 
 #extra
 --doesn't work because it requires ERE extensions
