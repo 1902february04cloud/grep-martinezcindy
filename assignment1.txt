@@ -1,0 +1,38 @@
+Lab 1
+
+#1
+grep '^Z'
+
+#2
+grep 'gan$'
+
+#3
+grep '^[A|D|E]'
+
+#4
+grep '\<.ar'
+
+#5
+grep -v '^C'
+
+#6
+--The command below will count blanks and non-english char giving 44 entries
+grep -E '.{14,100}'
+
+#7
+grep '^B' -c
+
+#8
+--The command below gives 79 entries, with -i giving 101 entries
+grep 'd' -c
+
+#9
+grep -E '(.)\1{1}$'
+
+#10
+grep -E ..........delimiter? script?
+
+#extra
+--doesn't work because it requires ERE extensions
+grep -E -e '^(.?)(.?)(.?)(.?)(.?)(.?)(.?)(.?)(.?).?\9\8\7\6\5\4\3\2\1' cities.txt
+Gulielmo Bondioni from: http://thelinuxtips.com/2010/10/31/find-palindrome-using-grep-command/
